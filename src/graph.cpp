@@ -48,7 +48,7 @@ Graph read_graph(istream& in) {
     for (int e = 0; e < e_num; ++e) {
         if (from[e] == -1 || to[e] == -1)
             throw runtime_error("col " + to_string(e) + ": edge must contain -1 and +1");
-        g.adj[from[e]].push_back(to[e]);
+        g.adj_[from[e]].push_back(to[e]);
     }
 
     return g;
