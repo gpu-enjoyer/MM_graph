@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "graph.hpp"
+#include "alg.hpp"
 
 using namespace std;
 
@@ -23,6 +24,13 @@ int main(int argc, char* argv[]) {
 
     try {
         Graph g = read_graph(in);
+        vector<int> ans = reachable_from_all(g);
+        if (ans.empty())
+            cout << "no such vertices\n";
+        else {
+            for (int v : ans) cout << v << ' ';
+            cout << '\n';
+        }
     }
     catch (const exception& e) {
         cerr << "error: " << e.what() << '\n';

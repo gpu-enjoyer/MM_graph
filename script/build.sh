@@ -6,4 +6,4 @@ mkdir build
 
 # clear
 
-g++ -g -O0 src/main.cpp src/graph.cpp -o build/bin
+g++ -g -O0 src/main.cpp src/graph.cpp src/alg.cpp -o build/bin
