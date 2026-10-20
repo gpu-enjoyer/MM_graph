@@ -4,18 +4,16 @@
 #include <vector>
 #include <iostream>
 
-using namespace std;
-
 
 class Graph {
 
     int v_num = 0;
-    vector<vector<int>> adj;
+    std::vector<std::vector<int>> adj;
 
 public:
 
     Graph(int v_num): v_num(v_num), adj(v_num) {};
-    friend Graph read_graph(istream&);
+    friend Graph read_graph(std::istream&);
 };
 
-Graph read_graph(istream& in);
+Graph read_graph(std::istream& in);

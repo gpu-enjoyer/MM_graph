@@ -1,8 +1,11 @@
 
-#include "graph.hpp"
-
 #include <string>
 #include <stdexcept>
+
+#include "graph.hpp"
+
+using namespace std;
+
 
 Graph read_graph(istream& in) {
 
